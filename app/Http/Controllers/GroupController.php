@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Group;
+use App\Http\Requests\CreateGroupRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class GroupController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the group.
      *
      * @return \Illuminate\Http\Response
      */
@@ -19,18 +20,18 @@ class GroupController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created group in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateGroupRequest $request)
     {
         //
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified group.
      *
      * @param  \App\Group  $group
      * @return \Illuminate\Http\Response
@@ -41,7 +42,7 @@ class GroupController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified group in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Group  $group
@@ -53,7 +54,7 @@ class GroupController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified group from storage.
      *
      * @param  \App\Group  $group
      * @return \Illuminate\Http\Response
