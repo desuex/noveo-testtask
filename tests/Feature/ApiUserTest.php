@@ -23,7 +23,7 @@ class ApiUserTest extends TestCase
 
     private function createGroup()
     {
-        return  $this->withHeaders([
+        return $this->withHeaders([
             'X-Requested-With' => 'XMLHttpRequest',
         ])->json('POST', '/api/groups', ['name' => $this->faker->unique()->word]);
 
@@ -90,4 +90,60 @@ class ApiUserTest extends TestCase
         $response->assertStatus(200);
         $response->assertJson(['id' => $userId]);
     }
+
+    public function testCreateUserValidation()
+    {
+        $response =$this->withHeaders([
+            'X-Requested-With' => 'XMLHttpRequest',
+        ])->json('POST', '/api/users',
+            ['password' => $this->faker->unique()->password, 'first_name' => $this->faker->unique()->firstName,
+                'last_name' => $this->faker->unique()->lastName,
+                'email' => null, 'group_id' => null]);
+        $response
+            ->assertStatus(422)
+            ->assertJsonValidationErrors(["group_id",'email']);
+    }
+
+    public function testCreateUserValidationWithImpossibleGroupId()
+    {
+        $response =$this->withHeaders([
+            'X-Requested-With' => 'XMLHttpRequest',
+        ])->json('POST', '/api/users',
+            ['password' => $this->faker->unique()->password, 'first_name' => $this->faker->unique()->firstName,
+                'last_name' => $this->faker->unique()->lastName,
+                'email' => $this->faker->unique()->email, 'group_id' => -1]);
+        $response
+            ->assertStatus(422)
+            ->assertJsonValidationErrors(["group_id"]);
+    }
+
+    public function testUpdateUserWithIncorrectData()
+    {
+        $groupId =$this->createGroup()->json('id');
+        $userId = $this->createUser($groupId)->json('id');
+
+        $response = $this->withHeaders([
+            'X-Requested-With' => 'XMLHttpRequest',
+        ])->json('PATCH', '/api/users/' . $userId,
+            []);
+        $response
+            ->assertStatus(422)
+            ->assertJsonValidationErrors(["email"]);
+    }
+
+    public function testUpdateImpossibleUser()
+    {
+        $userId = -1;
+
+        $response = $this->withHeaders([
+            'X-Requested-With' => 'XMLHttpRequest',
+        ])->json('PATCH', '/api/users/' . $userId,
+            []);
+        $response
+            ->assertStatus(404);
+    }
+
+
+
+
 }

@@ -8,6 +8,17 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ApiGroupTest extends TestCase
 {
+    use WithFaker;
+
+
+    private function createGroup()
+    {
+        return $this->withHeaders([
+            'X-Requested-With' => 'XMLHttpRequest',
+        ])->json('POST', '/api/groups', ['name' => $this->faker->unique()->word]);
+
+    }
+
     /**
      * Test the group list api route
      *
@@ -21,15 +32,13 @@ class ApiGroupTest extends TestCase
     }
 
     /**
-     * A basic functional test example.
+     * Test group creation
      *
      * @return void
      */
     public function testCreatingGroup()
     {
-        $response = $this->withHeaders([
-            'X-Requested-With' => 'XMLHttpRequest',
-        ])->json('POST', '/api/groups', ['name' => 'group name']);
+        $response = $this->createGroup();
 
         $response
             ->assertStatus(201)
@@ -41,28 +50,46 @@ class ApiGroupTest extends TestCase
     public function testUpdatingGroup()
     {
         //Creating group to be modified
-        $response = $this->withHeaders([
-            'X-Requested-With' => 'XMLHttpRequest',
-        ])->json('POST', '/api/groups', ['name' => 'group name to be updated']);
+        $response = $this->createGroup();
         $insertedId = $response->json('id');
-        $this->assertGreaterThan(0,$insertedId);
+        $this->assertGreaterThan(0, $insertedId);
 
+        $newGroupName = $this->faker->unique()->word;
         $response = $this->withHeaders([
             'X-Requested-With' => 'XMLHttpRequest',
-        ])->json('PATCH', '/api/groups/'.$insertedId, ['name' => 'new group name']);
+        ])->json('PATCH', '/api/groups/' . $insertedId, ['name' => $newGroupName]);
         $response
             ->assertStatus(200)
             ->assertJson([
                 'updated' => true,
             ]);
 
-        $response = $this->get('/api/groups/'.$insertedId);
+        $response = $this->get('/api/groups/' . $insertedId);
         $response->assertStatus(200);
-        $response->assertJson(['name' => 'new group name']);
+        $response->assertJson(['name' => $newGroupName]);
 
+    }
 
+    public function testNameFieldValidation()
+    {
+        $response = $this->withHeaders([
+            'X-Requested-With' => 'XMLHttpRequest',
+        ])->json('POST', '/api/groups', ['name' => null]);
 
+        $response
+            ->assertStatus(422)
+            ->assertJsonValidationErrors(["name"]);
+    }
 
+    public function testUpdateImpossibleGroup()
+    {
+        $groupId = -1;
 
+        $response = $this->withHeaders([
+            'X-Requested-With' => 'XMLHttpRequest',
+        ])->json('PATCH', '/api/group/' . $groupId,
+            []);
+        $response
+            ->assertStatus(404);
     }
 }

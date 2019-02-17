@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b06d2f1f-4620-4cb7-9033-4b66794bab71" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/UpdateUserRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/UserService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/ApiUserTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CreateUserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CreateUserRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ApiGroupTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ApiGroupTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ApiUserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ApiUserTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,8 +25,20 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+            <state relative-caret-position="311">
+              <caret line="36" column="84" selection-start-line="36" selection-start-column="84" selection-end-line="36" selection-end-column="84" />
+              <folding>
+                <element signature="e#23#63#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Group.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Group.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -47,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserService.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Services/UserService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
+            <state relative-caret-position="600">
               <caret line="40" column="52" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
               <folding>
                 <element signature="e#33#47#0#PHP" expanded="true" />
@@ -74,8 +82,20 @@
       <file leaf-file-name="ApiUserTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Feature/ApiUserTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="86" column="15" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="15" />
+            <state relative-caret-position="227">
+              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApiGroupTest.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/Feature/ApiGroupTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
+              <folding>
+                <element signature="e#33#52#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,15 +133,15 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/routes/api.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/CreateGroupRequest.php" />
-        <option value="$PROJECT_DIR$/tests/Feature/ApiGroupTest.php" />
-        <option value="$PROJECT_DIR$/app/Group.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/UpdateUserRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/CreateUserRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/GroupController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/app/Services/UserService.php" />
+        <option value="$PROJECT_DIR$/app/Group.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/tests/Feature/ApiUserTest.php" />
-        <option value="$PROJECT_DIR$/app/Services/UserService.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/ApiGroupTest.php" />
       </list>
     </option>
   </component>
@@ -347,36 +367,36 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.ApiUserTest.testUpdatingUser">
-    <configuration name="ApiGroupTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ApiGroupTest" file="$PROJECT_DIR$/tests/Feature/ApiGroupTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.tests">
+    <configuration name="ApiGroupTest.testUpdateImpossibleGroup" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ApiGroupTest" file="$PROJECT_DIR$/tests/Feature/ApiGroupTest.php" method="testUpdateImpossibleGroup" scope="Method" />
     </configuration>
-    <configuration name="ApiGroupTest.testUpdatingGroup" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ApiGroupTest" file="$PROJECT_DIR$/tests/Feature/ApiGroupTest.php" method="testUpdatingGroup" scope="Method" />
+    <configuration name="ApiUserTest.testCreateUserValidationWithUnexistingGroup" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ApiUserTest" file="$PROJECT_DIR$/tests/Feature/ApiUserTest.php" method="testCreateUserValidationWithUnexistingGroup" scope="Method" />
     </configuration>
-    <configuration name="ApiUserTest.testCreatingUser" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ApiUserTest" file="$PROJECT_DIR$/tests/Feature/ApiUserTest.php" method="testCreatingUser" scope="Method" />
+    <configuration name="ApiUserTest.testUpdateImpossibleUser" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ApiUserTest" file="$PROJECT_DIR$/tests/Feature/ApiUserTest.php" method="testUpdateImpossibleUser" scope="Method" />
     </configuration>
-    <configuration name="ApiUserTest.testList" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ApiUserTest" file="$PROJECT_DIR$/tests/Feature/ApiUserTest.php" method="testList" scope="Method" />
+    <configuration name="ApiUserTest.testUpdateUserWithIncorrectData" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ApiUserTest" file="$PROJECT_DIR$/tests/Feature/ApiUserTest.php" method="testUpdateUserWithIncorrectData" scope="Method" />
     </configuration>
-    <configuration name="ApiUserTest.testUpdatingUser" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ApiUserTest" file="$PROJECT_DIR$/tests/Feature/ApiUserTest.php" method="testUpdatingUser" scope="Method" />
+    <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$/tests" />
     </configuration>
     <list>
-      <item itemvalue="PHPUnit.ApiGroupTest" />
-      <item itemvalue="PHPUnit.ApiGroupTest.testUpdatingGroup" />
-      <item itemvalue="PHPUnit.ApiUserTest.testList" />
-      <item itemvalue="PHPUnit.ApiUserTest.testCreatingUser" />
-      <item itemvalue="PHPUnit.ApiUserTest.testUpdatingUser" />
+      <item itemvalue="PHPUnit.ApiUserTest.testCreateUserValidationWithUnexistingGroup" />
+      <item itemvalue="PHPUnit.tests" />
+      <item itemvalue="PHPUnit.ApiUserTest.testUpdateUserWithIncorrectData" />
+      <item itemvalue="PHPUnit.ApiUserTest.testUpdateImpossibleUser" />
+      <item itemvalue="PHPUnit.ApiGroupTest.testUpdateImpossibleGroup" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.ApiUserTest.testUpdatingUser" />
-        <item itemvalue="PHPUnit.ApiUserTest.testCreatingUser" />
-        <item itemvalue="PHPUnit.ApiUserTest.testList" />
-        <item itemvalue="PHPUnit.ApiGroupTest.testUpdatingGroup" />
-        <item itemvalue="PHPUnit.ApiGroupTest" />
+        <item itemvalue="PHPUnit.tests" />
+        <item itemvalue="PHPUnit.ApiGroupTest.testUpdateImpossibleGroup" />
+        <item itemvalue="PHPUnit.ApiUserTest.testUpdateImpossibleUser" />
+        <item itemvalue="PHPUnit.ApiUserTest.testUpdateUserWithIncorrectData" />
+        <item itemvalue="PHPUnit.ApiUserTest.testCreateUserValidationWithUnexistingGroup" />
       </list>
     </recent_temporary>
   </component>
@@ -390,7 +410,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550353957592</updated>
-      <workItem from="1550354148882" duration="10697000" />
+      <workItem from="1550354148882" duration="11848000" />
     </task>
     <task id="LOCAL-00001" summary="Making Api group tests + implement api responses">
       <created>1550401335770</created>
@@ -399,43 +419,50 @@
       <option name="project" value="LOCAL" />
       <updated>1550401335771</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Making Api users tests + implement api responses">
+      <created>1550404440552</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1550404440552</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ApiUserTest_testCreatingUser - 2019.02.17 at 14h 30m 49s.xml">
-      <configuration name="ApiUserTest.testCreatingUser" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ApiUserTest_testCreateUserValidation - 2019.02.17 at 15h 01m 08s.xml">
+      <configuration name="ApiUserTest.testCreateUserValidation" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ApiUserTest_testCreatingUser - 2019.02.17 at 14h 31m 49s.xml">
-      <configuration name="ApiUserTest.testCreatingUser" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ApiUserTest_testCreateUserValidationWithUnexistingGroup - 2019.02.17 at 15h 01m 55s.xml">
+      <configuration name="ApiUserTest.testCreateUserValidationWithUnexistingGroup" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ApiUserTest_testCreatingUser - 2019.02.17 at 14h 36m 46s.xml">
-      <configuration name="ApiUserTest.testCreatingUser" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ApiUserTest_testCreateUserValidationWithUnexistingGroup - 2019.02.17 at 15h 02m 02s.xml">
+      <configuration name="ApiUserTest.testCreateUserValidationWithUnexistingGroup" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ApiUserTest_testCreatingUser - 2019.02.17 at 14h 38m 02s.xml">
-      <configuration name="ApiUserTest.testCreatingUser" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="tests - 2019.02.17 at 15h 02m 31s.xml">
+      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ApiUserTest_testUpdatingUser - 2019.02.17 at 14h 40m 46s.xml">
-      <configuration name="ApiUserTest.testUpdatingUser" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ApiUserTest_testUpdateUserWithIncorrectData - 2019.02.17 at 15h 04m 43s.xml">
+      <configuration name="ApiUserTest.testUpdateUserWithIncorrectData" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ApiUserTest_testUpdatingUser - 2019.02.17 at 14h 41m 29s.xml">
-      <configuration name="ApiUserTest.testUpdatingUser" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ApiUserTest_testUpdateUserWithIncorrectData - 2019.02.17 at 15h 04m 58s.xml">
+      <configuration name="ApiUserTest.testUpdateUserWithIncorrectData" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ApiUserTest_testUpdatingUser - 2019.02.17 at 14h 42m 30s.xml">
-      <configuration name="ApiUserTest.testUpdatingUser" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ApiUserTest_testUpdateImpossibleUser - 2019.02.17 at 15h 06m 07s.xml">
+      <configuration name="ApiUserTest.testUpdateImpossibleUser" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ApiUserTest_testUpdatingUser - 2019.02.17 at 14h 43m 36s.xml">
-      <configuration name="ApiUserTest.testUpdatingUser" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ApiUserTest_testUpdateImpossibleUser - 2019.02.17 at 15h 06m 17s.xml">
+      <configuration name="ApiUserTest.testUpdateImpossibleUser" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ApiUserTest_testUpdatingUser - 2019.02.17 at 14h 48m 42s.xml">
-      <configuration name="ApiUserTest.testUpdatingUser" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ApiGroupTest_testUpdateImpossibleGroup - 2019.02.17 at 15h 06m 41s.xml">
+      <configuration name="ApiGroupTest.testUpdateImpossibleGroup" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ApiUserTest_testUpdatingUser - 2019.02.17 at 14h 49m 54s.xml">
-      <configuration name="ApiUserTest.testUpdatingUser" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="tests - 2019.02.17 at 15h 06m 46s.xml">
+      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10697000" />
+    <option name="totallyTimeSpent" value="11848000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -471,7 +498,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Making Api group tests + implement api responses" />
-    <option name="LAST_COMMIT_MESSAGE" value="Making Api group tests + implement api responses" />
+    <MESSAGE value="Making Api users tests + implement api responses" />
+    <option name="LAST_COMMIT_MESSAGE" value="Making Api users tests + implement api responses" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.env">
@@ -543,23 +576,6 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Group.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/ApiGroupTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="47" selection-end-column="48" />
-          <folding>
-            <element signature="e#33#52#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/CreateUserRequest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -598,6 +614,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="36" column="84" selection-start-line="36" selection-start-column="84" selection-end-line="36" selection-end-column="84" />
+          <folding>
+            <element signature="e#23#63#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Group.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
@@ -605,20 +638,6 @@
           <folding>
             <element signature="e#40#54#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/ApiUserTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="86" column="15" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -634,10 +653,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/UserService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
+        <state relative-caret-position="600">
           <caret line="40" column="52" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
           <folding>
             <element signature="e#33#47#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/ApiUserTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/ApiGroupTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
+          <folding>
+            <element signature="e#33#52#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
