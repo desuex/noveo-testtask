@@ -15,5 +15,5 @@ use Illuminate\Http\Request;
 
 Route::apiResources([
     'users' => 'UserController',
-    'groups' => 'PostController'
+    'groups' => 'GroupController'
 ]);
